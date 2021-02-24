@@ -1,0 +1,79 @@
+<!-- Customizable Blog Template Project By: Brandon Meyer -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Customize Template Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="resources/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+
+  <body onload="init();">
+    <div id="nav-masthead" class="blog-masthead">
+      <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+          <h1 id="language" name="language" class="blog-title">The Blog</h1>
+          <div class="row pull-right">              
+            
+          
+        </div>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+      <div class="col-sm-2 blog-main"></div>
+        <div class="col-sm-8 blog-main">
+            <form id="loginForm" method="get">
+          <h3>Admin Login</h3>
+          <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+            <input type="text" name="user" id="usrnm" placeholder="Username">
+            <br>
+            <label for="pswd" class="ui-hidden-accessible">Password:</label>
+            <input type="password" name="passw" id="pswd" placeholder="Password">
+            <br>
+            <input type="button" data-inline="true" value="Log in" onClick="main.authenticate();">
+        </form>
+        </div>
+        <div class="col-sm-2 blog-main"></div>
+
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+
+
+  <!-- Color changes JavaScript
+    ================================================== -->
+    <script type="text/javascript" src="resources/js/main.js"></script>
+    <script type="text/javascript" src="resources/js/database.js"></script>
+    <script type="text/javascript" src="resources/js/color.js"></script>
+    <script type="text/javascript">
+          init = function() 
+          {
+              document.getElementById("language").contentEditable = true;
+          }
+
+          document.getElementById("language").addEventListener("input", function() {
+               main.title = $('#language').html().toLowerCase();
+          }, false);
+     </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  </body>
+</html>
